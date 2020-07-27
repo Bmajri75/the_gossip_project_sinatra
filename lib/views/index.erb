@@ -1,10 +1,13 @@
 <html>
+  <html>
   <head>
     <title>The Gossip Project</title>
   </head>
   <body>
-  <h1> Bienvenue</h1>
-    <p> Les potins arrive bientot en attendant, tu peut aller créer un nouveau potin <a href="/gossips/new/">ICI</a></p>
-
+    <% gossips.each_with_index do |gossip,index| %><!-- On boucle sur le tableau de gossip et on les affiches tous-->
+        <p><a href = 'gossips/<%= index %>' >Potin n°<%= index %></a><br/>
+        </p>
+    <% end %>
+    <a href = '/gossips/new'>Ajouter un Gossip</a>
   </body>
 </html>
